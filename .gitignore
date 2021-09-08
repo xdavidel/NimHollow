@@ -1,0 +1,4 @@
+syscalls.nim
+out.nim
+*.bin
+*.exe
