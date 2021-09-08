@@ -51,10 +51,10 @@ optional arguments:
 
 ## Process Hollowing in Slides
 
-![](https://user-images.githubusercontent.com/23141800/132566686-09dda614-6cb7-46ea-9218-716ce31a7798.png)
-![](https://user-images.githubusercontent.com/23141800/132566690-d60e7db0-0370-41ab-85cf-0b0ee8cc50fb.png)
-![](https://user-images.githubusercontent.com/23141800/132566771-b7b4a867-3afc-4cb6-8e0d-a722bd683c6b.png)
-![](https://user-images.githubusercontent.com/23141800/132566782-f491ac47-cc6e-4298-a9f5-4f283b6246ad.png)
+![](https://user-images.githubusercontent.com/23141800/132571935-07adfa73-f33d-4c37-b21c-7f8534699a8d.png)
+![](https://user-images.githubusercontent.com/23141800/132571944-de967c1f-1518-4d91-a4d6-4d63120017d7.png)
+![](https://user-images.githubusercontent.com/23141800/132571951-fb9b08b4-b6ab-4ae9-9387-e6f316fd4500.png)
+![](https://user-images.githubusercontent.com/23141800/132571964-588c830e-de06-4b09-a708-b32c4150a17c.png)
 
 ## Credits
 
