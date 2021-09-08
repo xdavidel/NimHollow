@@ -54,7 +54,7 @@ if __name__ == '__main__':
     if not args.debug:
         # Strip debug messages from Nim binary
         template = re.sub(r'.*DEBUG.*\n', '', template)
-        template = re.sub(r'\s+#.*', '', template)
+        template = re.sub(r'\s+# .*', '', template)
 
     # Choose process image
     template = template.replace('processImage: string = r""', f'processImage: string = r"{args.image}"')

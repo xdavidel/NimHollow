@@ -7,8 +7,8 @@ Features:
 
 * Direct syscalls for triggering Windows Native API functions with [NimlineWhispers](https://github.com/ajpc500/NimlineWhispers).
 * Shellcode encryption/decryption with [AES in CTR mode](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Counter_(CTR)).
-* AMSI patching with @rasta-mouse's [method](https://rastamouse.me/memory-patching-amsi-bypass/).
-* Simple sandbox detection techniques from the OSEP course by @offensive-security.
+* Simple sandbox detection methods from the OSEP course by @offensive-security.
+* AMSI patching with @rasta-mouse's [method](https://rastamouse.me/memory-patching-amsi-bypass/) is also inside (uncomment it for your needs).
 
 ## Usage
 
